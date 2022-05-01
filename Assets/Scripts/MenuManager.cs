@@ -10,7 +10,15 @@ using UnityEditor;
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private TMP_InputField nameField;
-   public void ChangeSessionName()
+
+    private void Start()
+    {
+        if (GeneralManager.Instance.sessionName != "Lazy")
+        {
+            nameField.text = GeneralManager.Instance.sessionName;
+        }
+    }
+    public void ChangeSessionName()
     {
         GeneralManager.Instance.sessionName = nameField.text;
     }
