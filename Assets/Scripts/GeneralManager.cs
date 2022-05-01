@@ -11,12 +11,7 @@ public class GeneralManager : MonoBehaviour
     public string playerName;
     public string sessionName = "Lazy";
     public int highScore;
-    [SerializeField] private TMP_Text highScoreText;
-
-    private void Start()
-    {
-        MainMenuScore();
-    }
+    public TMP_Text highScoreText;
 
     private void Update()
     {
@@ -83,12 +78,5 @@ public class GeneralManager : MonoBehaviour
         {
             playerName = "NA";
         }
-        Debug.Log(playerName);
-    }
-    private void DeleteSave()
-    {
-        
-        string path = Application.persistentDataPath + "/savefile.json";
-        File.Delete(path);
     }
 }

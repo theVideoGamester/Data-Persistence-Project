@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
         {
             nameField.text = GeneralManager.Instance.sessionName;
         }
+        GeneralManager.Instance.MainMenuScore();
     }
     public void ChangeSessionName()
     {
